@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgreen;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 30px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    aspect-ratio: 1 / 1;
+    margin-top: 25px;
+    border: 5px solid green;
+    border-radius: 10%;
+    background-color: rgb(175, 254, 175);
+}

@@ -1,22 +1,16 @@
 import { processData } from "./processData";
-import { displayName, displayTemp } from "./displayData";
+import { displayData } from "./displayData";
 import { capitalizeSentence } from "./capitalize";
 
 const searchBar = document.querySelector('.searchBar');
 
 async function searchCity() {
 
-    let myCity = capitalizeSentence(searchBar.value);
-
-    console.log('myCity is: '+ myCity);
-
-    let currentCity = await processData(myCity);
+    let currentCity = await processData(capitalizeSentence(searchBar.value));
     
     console.log(currentCity);
 
-    displayName(currentCity.address);
-
-    displayTemp(currentCity.temp);
+    displayData(currentCity.address, currentCity.temp, currentCity.conditions);
 
     searchBar.value = '';
 

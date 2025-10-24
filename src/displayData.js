@@ -1,26 +1,19 @@
 const display = document.querySelector('.display');
 
 let nameDiv = document.createElement('div');
-display.appendChild(nameDiv);
-
 let tempDiv = document.createElement('div');
+let condDiv = document.createElement('div');
+
+display.appendChild(nameDiv);
 display.appendChild(tempDiv);
+display.appendChild(condDiv);
 
+function displayData(address, temp, conditions) {
 
-function displayName(city) {
-
-    console.log(city);
-
-    nameDiv.textContent = city;
-
-};
-
-function displayTemp(temp) {
-
-    console.log(temp);
-
+    nameDiv.textContent = address;
     tempDiv.textContent = `Temperature: ${temp}`;
+    condDiv.textContent = `Conditions: ${conditions}`;
 
 };
 
-export {displayName, displayTemp}
+export {displayData}

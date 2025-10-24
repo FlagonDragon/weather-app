@@ -1,5 +1,5 @@
 import './styles.css';
-import addSearchListener from './searchBar';
+import addSearchListener from './searchCity';
 
 addSearchListener();
 

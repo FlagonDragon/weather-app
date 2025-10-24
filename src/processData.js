@@ -27,4 +27,4 @@ async function processData(city) {
     
 };
 
-export {logWeather, processData}
+export {processData}

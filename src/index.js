@@ -1,7 +1,5 @@
 import './styles.css';
-import addSearchListener from './searchCity';
+import addListeners from './addListeners';
 
-addSearchListener();
-
-// a
+addListeners();
 

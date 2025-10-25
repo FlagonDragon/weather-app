@@ -1,5 +1,5 @@
 import { processData } from "./processData";
-import { displayData } from "./displayData";
+import { tempDiv, displayData, displayChange } from "./displayData";
 import { capitalizeSentence } from "./capitalize";
 
 const searchBar = document.querySelector('.searchBar');
@@ -14,9 +14,11 @@ async function searchCity() {
 
     searchBar.value = '';
 
+    return currentCity
+
 };
 
-function addSearchListener() {
+function addListeners() {
 
     searchBar.addEventListener('keydown', (e) => {
 
@@ -28,6 +30,13 @@ function addSearchListener() {
 
     });
 
+
+    tempDiv.addEventListener('click', (e) => {
+
+        displayChange();
+
+    });
+
 };
 
-export default addSearchListener
+export default addListeners

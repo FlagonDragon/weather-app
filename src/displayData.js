@@ -10,7 +10,7 @@ display.appendChild(nameDiv);
 display.appendChild(tempDiv);
 display.appendChild(condDiv);
 
-let tempNum;
+let tempObj = {num: ''};
 
 function displayData(address, temp, conditions) {
 
@@ -28,31 +28,30 @@ function displayData(address, temp, conditions) {
 
     condDiv.textContent = `Conditions: ${conditions}`;
 
-    tempNum = (tempDiv.textContent.replace(/[^0-9]/g, ''))/10;
+    tempObj.num = (tempDiv.textContent.replace(/[^0-9]/g, ''))/10;
 
 };
 
 function displayChange() {
 
-    console.log(currentScale);
+    console.log('tempObj.num: '+tempObj.num);
 
-    console.log('tempNum: '+tempNum);
+    console.log('currentScale: '+currentScale);
 
-    let newTempNum = changeScale(tempNum);
+    tempObj.num = changeScale(tempObj.num);
 
-    tempNum = newTempNum;
+    console.log('currentScale: '+currentScale);
 
-    console.log('newTempNum: '+newTempNum);
+    console.log('new tempObj.num: '+tempObj.num);
 
-    console.log(currentScale);
 
     if (currentScale == 'fahrenheit') {
 
-        tempDiv.textContent = `Temperature: ${tempNum} °F`;
+        tempDiv.textContent = `Temperature: ${Math.round(tempObj.num*10)/10} °F`;
 
     } else {
 
-        tempDiv.textContent = `Temperature: ${(tempNum)} °C`;
+        tempDiv.textContent = `Temperature: ${Math.round(tempObj.num*10)/10} °C`;
 
     }
 

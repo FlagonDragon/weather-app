@@ -13,7 +13,7 @@ celsius = (fahrenheit - 32) * 5/9
     } else {
         console.log('celsius: '+celsius);
         
-        return +celsius.toFixed(1);
+        return +celsius;
     }
 
 };
@@ -31,7 +31,7 @@ fahrenheit = celsius * (9/5) + 32;
     } else {
         console.log('fahrenheit: '+fahrenheit);
 
-        return +fahrenheit.toFixed(1);
+        return +fahrenheit;
     }
     
 };

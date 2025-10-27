@@ -10,7 +10,7 @@ async function searchCity() {
     
     console.log(currentCity);
 
-    displayData(currentCity.address, currentCity.temp, currentCity.conditions);
+    displayData(currentCity.address, currentCity.temp, currentCity.conditions, currentCity.icon);
 
     searchBar.value = '';
 

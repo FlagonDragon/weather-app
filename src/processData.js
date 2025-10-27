@@ -1,5 +1,5 @@
 let weatherData;
-let currentCity = {address: '', temp: '', conditions: ''}
+let currentCity = {address: '', temp: '', conditions: '', icon: ''}
 
 async function logWeather(city) {
 
@@ -19,9 +19,11 @@ async function processData(city) {
 
     currentCity.address = result.address;
 
+    currentCity.temp = result.days[0].temp;
+
     currentCity.conditions = result.currentConditions.conditions;
 
-    currentCity.temp = result.days[0].temp;
+    currentCity.icon = result.currentConditions.icon;
 
     return currentCity;
     

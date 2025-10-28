@@ -65,4 +65,4 @@ function displayChange() {
 
 };
 
-export {container, nameDiv, tempDiv, condDiv, imgEl, displayData, displayChange}
+export {container, tempDiv, displayData, displayChange}

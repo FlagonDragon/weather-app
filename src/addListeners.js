@@ -1,5 +1,5 @@
 import { processData } from "./processData";
-import { container, nameDiv, tempDiv, condDiv, imgEl, displayData, displayChange } from "./displayData";
+import { container, tempDiv, displayData, displayChange } from "./displayData";
 import { capitalizeSentence } from "./capitalize";
 import loader from "./loader.gif"
 

@@ -6,6 +6,8 @@ const searchBar = document.querySelector('.searchBar');
 
 async function searchCity() {
 
+    try {
+
     let currentCity = await processData(capitalizeSentence(searchBar.value));
     
     console.log(currentCity);
@@ -15,6 +17,16 @@ async function searchCity() {
     searchBar.value = '';
 
     return currentCity
+
+    } catch (error) {
+
+        console.log(error);
+        
+        alert("'"+searchBar.value+"'"+' is not a valid city!');
+
+        searchBar.value = '';
+
+    }
 
 };
 

@@ -1,6 +1,6 @@
 import { currentScale, convertToCelsius, changeScale } from "./changeScale";
 
-const display = document.querySelector('.display');
+const container = document.querySelector('.container');
 
 let nameDiv = document.createElement('div');
 let tempDiv = document.createElement('div');
@@ -8,10 +8,10 @@ let condDiv = document.createElement('div');
 let imgEl = document.createElement('img');
 imgEl.style.height = '80px'
 
-display.appendChild(nameDiv);
-display.appendChild(tempDiv);
-display.appendChild(condDiv);
-display.appendChild(imgEl);
+container.appendChild(nameDiv);
+container.appendChild(tempDiv);
+container.appendChild(condDiv);
+container.appendChild(imgEl);
 
 let tempObj = {num: ''};
 
@@ -65,4 +65,4 @@ function displayChange() {
 
 };
 
-export {tempDiv, displayData, displayChange}
+export {container, nameDiv, tempDiv, condDiv, imgEl, displayData, displayChange}

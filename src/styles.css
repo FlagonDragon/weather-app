@@ -27,13 +27,11 @@ input {
 .display {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     width: 325px;
     height: 420px;
     margin-top: 25px;
-    padding: 35px;
-    padding-top: 15px;
     border: 5px solid rgb(150, 150, 150);
     border-radius: 10%;
     background-color: darkcyan;
@@ -41,13 +39,22 @@ input {
     /* background-color: rgb(175, 254, 175); */
 }
 
-.display div {
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 35px;
+    padding-top: 15px;
+}
+
+.container div {
     font-size: 25px;
     margin: 15px;
     color: white;
 }
 
-.display > div:first-child {
+.container > div:first-child {
     font-size: 35px;
     margin: 30px;
     color: white;

@@ -1,14 +1,28 @@
 import { processData } from "./processData";
-import { tempDiv, displayData, displayChange } from "./displayData";
+import { container, nameDiv, tempDiv, condDiv, imgEl, displayData, displayChange } from "./displayData";
 import { capitalizeSentence } from "./capitalize";
+import loader from "./loader.gif"
 
 const searchBar = document.querySelector('.searchBar');
+const display = document.querySelector('.display');
+let buffer = document.createElement('img');
+buffer.style.height = '50px'
 
 async function searchCity() {
 
     try {
 
+    container.style.display = 'none';
+
+    buffer.src = loader;
+
+    display.appendChild(buffer)
+
     let currentCity = await processData(capitalizeSentence(searchBar.value));
+
+    buffer.remove();
+
+    container.style.display = 'flex'
     
     console.log(currentCity);
 
@@ -21,6 +35,10 @@ async function searchCity() {
     } catch (error) {
 
         console.log(error);
+
+        buffer.remove();
+
+        container.style.display = 'flex'
         
         alert("'"+searchBar.value+"'"+' is not a valid city!');
 

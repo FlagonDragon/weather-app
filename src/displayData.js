@@ -23,17 +23,19 @@ async function displayData(address, temp, conditions, icon) {
 
         tempDiv.textContent = `Temperature: ${temp} °F`;
 
+        tempObj.num = (temp);
+
     } else {
 
-        tempDiv.textContent = `Temperature: ${convertToCelsius(temp)} °C`;
+        tempDiv.textContent = `Temperature: ${Math.round(convertToCelsius(temp)*10)/10} °C`;
+
+        tempObj.num = (convertToCelsius(temp));
 
     }
 
     condDiv.textContent = `Conditions: ${conditions}`;
 
-    tempObj.num = (tempDiv.textContent.replace(/[^0-9]/g, ''))/10;
-
-    console.log(icon);
+    console.log(tempObj.num);
 
     let mySrc = await import(`./imgModules/${icon}.js`);
     imgEl.src = mySrc.img;
